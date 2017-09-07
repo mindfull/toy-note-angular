@@ -1,0 +1,40 @@
+@import 'src/assets/styles/_variables';
+
+.app-header {
+  height: 128px;
+  background: $header-background;
+  border: 1px solid $border-gray;
+  padding: 60px 32px 0;
+}
+
+.header-title {
+  color: $header-text;
+  float: left;
+  font-size: 3rem;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.header-functions {
+  float: right;
+  padding-top: 20px;
+}
+
+.functions-btn {
+  border: 0;
+  width: 28px;
+  height: 28px;
+  padding: 5px;
+  cursor: pointer;
+  transition: background .5s;
+  border-radius: 5px;
+
+  &:hover {
+    background: $header-background-hover;
+  }
+
+  * {
+    vertical-align: top;
+  }
+}
+

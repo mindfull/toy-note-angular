@@ -1,0 +1,73 @@
+@import "src/assets/styles/_variables";
+
+.app-auth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: url('/assets/images/notepad-retouched.jpg') 50% 50% /cover no-repeat;
+}
+
+.app-auth-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 480px;
+  height: 520px;
+  border-radius: 20px;
+  background-color: $auth-box-background;
+  animation: boxFadeIn 1s;
+}
+
+@keyframes boxFadeIn {
+  from {
+    transform: translateY(10%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.box-logo {
+  margin: 0;
+  font-size: 4rem;
+  letter-spacing: -1px;
+  color: $color-primary;
+}
+
+.btn-group {
+  margin-top: 70px;
+}
+
+.btn-login {
+  width: 360px;
+  height: 56px;
+  font-size: 1.125rem;
+  line-height: 1.3;
+  border: 0;
+  border-radius: 28px;
+  cursor: pointer;
+}
+
+.btn-login-fb {
+  color: #fff;
+  background-color: $auth-btn-fb-background;
+  transition: background-color .5s;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 1.2em;
+    margin-right: 10px;
+    vertical-align: top;
+    background: url('/assets/images/fb.svg') 50% 50% no-repeat;
+  }
+
+  &:hover {
+    background-color: darken($auth-btn-fb-background, 7%);
+  }
+}

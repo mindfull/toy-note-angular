@@ -1,3 +1,5 @@
+@import "src/assets/styles/_variables";
+
 .app-section {
   display: flex;
   flex-direction: column;
@@ -5,6 +7,66 @@
 }
 
 .app-main {
+  display: flex;
   flex: 1;
+  align-items: stretch;
   overflow-y: auto;
+
+  .app-sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    border-right: 1px solid $border-gray-light;
+  }
+
+  .app-viewer {
+    flex: 1;
+    overflow: auto;
+  }
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: stretch;
+  height: 48px;
+  border-bottom: 1px solid $border-gray-light;
+
+  .sidebar-search {
+    flex: 1;
+    padding-left: 59px;
+    border: 0;
+    background: url('/assets/images/search.svg') 32px 50% no-repeat;
+
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: $text-placeholder;
+      font-style: italic;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+      color: $text-placeholder;
+      font-style: italic;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+      color: $text-placeholder;
+      font-style: italic;
+    }
+  }
+
+  .bar {
+    margin: 10px 0;
+    width: 1px;
+    background: $border-gray-light;
+  }
+
+  .btn-add {
+    width: 80px;
+    border: 0;
+    text-indent: -10000px;
+    cursor: pointer;
+    background: url('/assets/images/add.svg') 32px 50% no-repeat;
+    transition: background-color .5s;
+
+    &:hover {
+      background-color: $btn-hover-background;
+    }
+  }
 }

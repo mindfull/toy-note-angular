@@ -21,6 +21,8 @@ import { HeaderComponent } from './header/header.component';
 import { MainComponent } from './main/main.component';
 import { AuthComponent } from './auth/auth.component';
 import { environment } from '../environments/environment';
+import { NoteViewerComponent } from './note-viewer/note-viewer.component';
+import { NoteListComponent } from './note-list/note-list.component';
 
 
 @Injectable()
@@ -46,7 +48,9 @@ export class AuthGuard implements CanActivate {
     AppComponent,
     HeaderComponent,
     MainComponent,
-    AuthComponent
+    AuthComponent,
+    NoteViewerComponent,
+    NoteListComponent
   ],
   imports: [
     BrowserModule,
